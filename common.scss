@@ -72,6 +72,11 @@ footer {
 }
 
 /* DEFAULT ELEMENT STYLES */
+* a {
+	text-decoration: none;
+	color: $l3-dark-gray;
+}
+
 hr {
     display: block;
     height: 1px;
