@@ -63,16 +63,8 @@ footer {
 }
 
 /* SELECTION */
-::selection {
+::selection, ::-webkit-selection, ::-moz-selection {
   background: $l2-dark-gray;
-  color: white;
-}
-::-webkit-selection {
-	background: $l2-dark-gray; 
-  	color: white;
-}
-::-moz-selection {
-  background: $l2-dark-gray; 
   color: white;
 }
 *:focus {
