@@ -1,2 +1,2 @@
-# css-starter-pack
-Stylesheets that I've wrote and commonly use on my webdev projects
+# sass-starter-pack
+Sass stylesheets that I commonly use on my webdev projects
