@@ -1,25 +1,20 @@
 /* COMMON SASS STYLESHEET BY: AUSTIN GEBAUER */
 
-/* SASS VARIABLES */
-$font-stack-<name>: '<add font>', 'Helvetica', sans-serif;
-$font-stack-<name>: '<add font>', 'Helvetica', sans-serif;
-
-/* COLORS */
-$l3-dark-gray: #222222;
-$l2-dark-gray: #333333;
-$l1-dark-gray: #808080;
-$l3-gray: #CCCCCC;
-$l2-gray: #DDDDDD;
-$l1-gray: #EEEEEE;
+@import 'fonts';
+@import 'colors';
 
 /* CUSTOM STYLES */
+body * {
+    font-family: $font-stack-osans;
+}
+
 body {
-    font-family: $font-stack-<name>;
     margin: 0;
+    background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-stack-<name>;
+    font-family: $font-stack-headers;
 }
 
 header {
@@ -62,28 +57,48 @@ footer {
     box-sizing: border-box;
 }
 
-/* SELECTION */
-::selection, ::-webkit-selection, ::-moz-selection {
-  background: $l2-dark-gray;
-  color: white;
+/* TEXT SELECTION */
+::selection {
+    background: $gray-2;
+    color: white;
 }
+
+::-webkit-selection {
+    background: $gray-2;
+    color: white;
+}
+
+::-moz-selection {
+    background: $gray-2;
+    color: white;
+}
+
+/* NO OUTLINE MY FOCUS PLZ */ 
 *:focus {
     outline: 0; 
+}
+
+/* PLACEHOLDER TEXT COLOR */
+::-webkit-input-placeholder {
+   color: $gray-4;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $gray-4;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $gray-4;  
+}
+
+:-ms-input-placeholder {  
+   color: $gray-4;  
 }
 
 /* DEFAULT ELEMENT STYLES */
 * a {
 	text-decoration: none;
-	color: $l3-dark-gray;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+	color: $gray-3;
 }
 
 /* FONTS */
