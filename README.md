@@ -1,2 +1,2 @@
-# sass-starter-pack
-Sass stylesheets that I commonly use on my webdev projects
+# web-starter-pack
+Files that I commonly use on web development projects

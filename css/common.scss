@@ -1,20 +1,21 @@
-/* COMMON SASS STYLESHEET BY: AUSTIN GEBAUER */
-
+/* COMMON SASS STYLESHEET: AUSTIN GEBAUER */
 @import 'fonts';
 @import 'colors';
 
 /* CUSTOM STYLES */
-body * {
-    font-family: $font-stack-osans;
+body {
+  font-family: $fs-;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 body {
-    margin: 0;
-    background-color: white;
+  margin: 0;
+  background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-stack-headers;
+  font-family: $fs-;
 }
 
 header {
@@ -26,83 +27,82 @@ header nav {
 }
 
 footer {
-	
+  
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 500px){
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
 
 }
 
-@media screen and (min-width: 501px) and (max-width: 767px) {
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1299px) {
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { 
 
 }
 
-@media screen and (min-width: 1300px) and (max-width: 1699px) {
-
+/* DEFAULT ELEMENT STYLES */
+body {
+  color: #333333;
 }
 
-@media screen and (min-width: 1700px) {
-
+a {
+  text-decoration: none;
+  color: $gray-3;
 }
 
 /* BETTER BOX SIZING */
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* TEXT SELECTION */
 ::selection {
-    background: $gray-2;
-    color: white;
+  background: $gray-2;
+  color: white;
 }
 
 ::-webkit-selection {
-    background: $gray-2;
-    color: white;
+  background: $gray-2;
+  color: white;
 }
 
 ::-moz-selection {
-    background: $gray-2;
-    color: white;
+  background: $gray-2;
+  color: white;
 }
 
 /* NO OUTLINE MY FOCUS PLZ */ 
 *:focus {
-    outline: 0; 
+  outline: 0; 
 }
 
 /* PLACEHOLDER TEXT COLOR */
 ::-webkit-input-placeholder {
-   color: $gray-4;
+  color: $gray-4;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: $gray-4;  
+  color: $gray-4;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: $gray-4;  
+  color: $gray-4;  
 }
 
 :-ms-input-placeholder {  
-   color: $gray-4;  
-}
-
-/* DEFAULT ELEMENT STYLES */
-* a {
-	text-decoration: none;
-	color: $gray-3;
+  color: $gray-4;  
 }
 
 /* FONTS */
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 //@font-face {

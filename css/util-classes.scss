@@ -1,19 +1,19 @@
 /* DISPLAY */
-.display-block {
+.block {
     display: block;
 }
 
-.display-inline-block {
+.inline-block {
     display: inline-block;
 }
 
-.display-inline {
+.inline {
     display: inline;
 }
 
 /* ALIGNMENT */
 .block-center {
-    margin: auto;
+    margin: 0 auto;
 }
 
 .text-right {
@@ -66,11 +66,6 @@
     box-shadow: -3px 2px 8px 0 rgba(0,0,0,0.20);
 }
 
-/* TEXT SIZES */
-.text-small {
-    font-size: 13px;
-}
-
 /* LISTS */
 .inline-list {
     list-style-type: none;
@@ -91,12 +86,6 @@
 
 .invisible {
     visibility: hidden;
-}
-
-/* GRID */
-.grid-container-full {
-    width: 100%;
-    overflow: hidden;
 }
 
 /* TESTING BORDERS */
