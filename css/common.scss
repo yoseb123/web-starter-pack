@@ -4,7 +4,7 @@
 
 /* CUSTOM STYLES */
 body {
-  font-family: $fs-;
+  font-family: $fs-osans;
   font-weight: 300;
   font-size: 16px;
 }
@@ -15,7 +15,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $fs-;
+  font-family: $fs-osans;
 }
 
 header {
@@ -33,17 +33,17 @@ footer {
 /* MEDIA QUERIES */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) {
+@media (min-width: 768px) {
 
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {
+@media (min-width: 992px) {
 
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { 
+@media (min-width: 1200px) { 
 
 }
 

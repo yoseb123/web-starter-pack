@@ -1,5 +1,7 @@
-(function() {
-	'use strict';
+'use strict';
 
-	
-})();
+window.onload = function() {
+
+};
+
+module.exports = window.onload;
