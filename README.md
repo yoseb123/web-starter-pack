@@ -15,3 +15,6 @@ Build JavaScript and CSS continuously (i.e., build and watch) using command `npm
 
 #### Included CSS Grid
 The grid.css and grid.min.css files (css/) are a custom [bootstrap](http://getbootstrap.com/customize) build including only the Grid System and Responsive Utilities.
+
+#### Note
+If you're cloning this to start a project, make sure to remove/edit the README.md and package.json files.
