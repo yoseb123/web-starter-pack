@@ -7,6 +7,7 @@ body {
   font-family: $fs-osans;
   font-weight: 300;
   font-size: 16px;
+  color: #333333;
   margin: 0;
   background-color: white;
 }
@@ -45,10 +46,6 @@ footer {
 }
 
 /* DEFAULT ELEMENT STYLES */
-body {
-  color: #333333;
-}
-
 a {
   text-decoration: none;
   color: $gray-3;
