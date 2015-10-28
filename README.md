@@ -7,8 +7,7 @@ Files that I commonly use on web development projects
 Install npm dependencies using command `npm install`  
 
 **Then:**  
-Build JavaScript and CSS one time `npm build`  
-Build JavaScript and CSS continuously while editing `npm build-watch`
+Build JavaScript and CSS continuously (i.e., build and watch) using command `npm run build`  
 
 #### Building behavior
 - All SASS stylesheets (css/*.scss) will be concatenated and minified into one file (all.min.css)
