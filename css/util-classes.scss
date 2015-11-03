@@ -66,6 +66,12 @@
     box-shadow: -3px 2px 8px 0 rgba(0,0,0,0.20);
 }
 
+/* GRID (apply .no-gutter to .row) */
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
 /* LISTS */
 .inline-list {
     list-style-type: none;
