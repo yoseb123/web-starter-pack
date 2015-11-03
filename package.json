@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Files commonly included in my web development projects",
   "main": "index.html",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "browserify": "^12.0.0",
     "glob": "^5.0.15",
     "gulp": "^3.9.0",
@@ -17,7 +18,6 @@
     "reactify": "^1.1.1",
     "vinyl-source-stream": "^1.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
