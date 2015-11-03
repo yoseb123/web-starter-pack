@@ -45,7 +45,7 @@ gulp.task('js', function() {
     };
 
     // bundle all files that aren't minified
-    var jsFiles = glob.sync(JS.SOURCE);
+    var jsFiles = glob.sync(JS.SOURCE, {nodir: true});
     for(var i = 0; i < jsFiles.length; i++) {
         var fileName = getFileName(jsFiles[i]);
         var extIndex = fileName.lastIndexOf('.');
