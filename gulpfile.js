@@ -21,8 +21,7 @@ var CSS = {
 
 var JS = {
     SOURCE: './js/!(*.min.js)',
-    DESTINATION: './js',
-    BUILD_FILE_NAME: 'main.min.js'
+    DESTINATION: './js'
 };
 
 gulp.task('css', function() {
