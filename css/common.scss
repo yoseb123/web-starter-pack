@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.5em 0;
 }
 
+a {
+  text-decoration: none;
+  color: $gray-3;
+}
+
 header {
     
 }
@@ -46,16 +51,44 @@ footer {
 
 }
 
-/* DEFAULT ELEMENT STYLES */
-a {
-  text-decoration: none;
-  color: $gray-3;
+/* KEYFRAMES */
+.way-in {
+  animation: animateIn 0.4s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  -webkit-animation: animateIn 0.4s;
+  -webkit-animation-delay: 0.1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+@keyframes animateIn {
+  from {
+      transform: translateY(500px);
+  }
+  to {
+    transform: translateY(0px);
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes animateIn {
+  from {
+      -webkit-transform: translateY(500px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+      opacity: 1;
+  }
 }
 
 /* BETTER BOX SIZING */
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
