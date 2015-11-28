@@ -3,15 +3,13 @@
 var gulp = require('gulp'),
     glob = require('glob'),
     browserify = require('browserify'),
-    reactify = require('reactify'),
     source = require('vinyl-source-stream'),
     uglify = require('gulp-uglify'),
     streamify = require('gulp-streamify'),
     minifyCSS = require('gulp-minify-css'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
-    sass = require('gulp-sass'),
-    rename = require('gulp-rename');
+    sass = require('gulp-sass');
 
 var CSS = {
     SOURCE: './css/*.scss',
@@ -52,7 +50,7 @@ gulp.task('js', function() {
         var minFileName = fileName.substring(0, extIndex) + '.min'
                         + fileName.substring(extIndex, fileName.length);
         browserify(jsFiles[i])
-        // .transform(reactify) // for JSX
+        .transform('babelify', {presets: ['es2015', 'react']})
         .bundle()
         .pipe(source(minFileName))
         .pipe(streamify(uglify()))
