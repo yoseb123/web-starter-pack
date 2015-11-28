@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass');
 
 var CSS = {
-    SOURCE: './css/*.scss',
+    SOURCE: './css/common.scss',
     DESTINATION: './css',
     BUILD_FILE_NAME: 'all.min.css' 
 };
