@@ -15,13 +15,13 @@ var CSS = {
     SOURCE: './css/common.scss',
     DESTINATION: './css',
     BUILD_FILE_NAME: 'all.min.css',
-    WATCH: './public/css/*.scss'
+    WATCH: './css/*.scss'
 };
 
 var JS = {
     SOURCE: './js/!(*.min.js)',
     DESTINATION: './js',
-    WATCH: './public/js/**/!(*.min.js)'
+    WATCH: './js/**/!(*.min.js)'
 };
 
 gulp.task('css', function() {
