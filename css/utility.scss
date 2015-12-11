@@ -37,6 +37,61 @@
     float: right;
 }
 
+/* LOADING */
+.loading {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: $dill-1;
+    animation-delay: 0.2s;
+    animation: loadingLoopOuter 0.8s infinite;
+    animation-timing-function: ease-in-out;
+
+    &::after {
+        content: '';
+        animation: loadingLoopInner 0.8s infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0.2s;
+        display: inline-block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        background-color: $dill-2;
+    }
+}
+
+@keyframes loadingLoopOuter {
+  0% {
+    transform: scale3d(0.5, 0.5, 0.5);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale3d(0.5, 0.5, 0.5);
+    opacity: 0.8;
+  }
+}
+
+@keyframes loadingLoopInner {
+  0% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale3d(0.1, 0.1, 0.1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+  }
+}
+
 /* BOX & TEXT SHADOW */
 .text-shadow-dark {
     text-shadow: 1px 1px 1px #444;
@@ -100,6 +155,18 @@
 
 .opacity-one {
     opacity: 1;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.clear-left {
+    clear: left;
 }
 
 /* TESTING BORDERS */

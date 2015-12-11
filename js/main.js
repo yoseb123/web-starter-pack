@@ -1,8 +1,7 @@
 'use strict';
 
 var React = require('react'),
-	ReactDOM = require('react-dom');
+	ReactDOM = require('react-dom'),
+    constants = require('./lib/constant');
 
-window.onload = function() {
-
-};
+console.log('JavaScript Working');

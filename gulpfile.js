@@ -15,13 +15,13 @@ var CSS = {
     SOURCE: './css/common.scss',
     DESTINATION: './css',
     BUILD_FILE_NAME: 'all.min.css',
-    WATCH: './css/*.scss'
+    WATCH: './css/**/*.scss'
 };
 
 var JS = {
     SOURCE: './js/!(*.min.js)',
-    DESTINATION: './js',
-    WATCH: './js/**/!(*.min.js)'
+    DESTINATION: './js/bundle',
+    WATCH: './js/**/!(*.min.js|*.dev.js)'
 };
 
 gulp.task('css', function() {
@@ -38,8 +38,8 @@ gulp.task('css', function() {
 
 gulp.task('js', function() {
     
-    // return the filename extension included from a path
-    var getFileName = function(path) {
+    // return the baseName extension included from a path
+    var getBaseName = function(path) {
         var directoryArr = path.split('/');
         return directoryArr[directoryArr.length - 1];
     };
@@ -47,14 +47,24 @@ gulp.task('js', function() {
     // bundle all files that aren't minified
     var jsFiles = glob.sync(JS.SOURCE, {nodir: true});
     for(var i = 0; i < jsFiles.length; i++) {
-        var fileName = getFileName(jsFiles[i]);
-        var extIndex = fileName.lastIndexOf('.');
-        var minFileName = fileName.substring(0, extIndex) + '.min'
-                        + fileName.substring(extIndex, fileName.length);
-        browserify(jsFiles[i])
+        var baseName = getBaseName(jsFiles[i]),
+            extIndex = baseName.lastIndexOf('.'),
+            fileName = baseName.substring(0, extIndex),
+            extension = baseName.substring(extIndex, baseName.length),
+            minBaseName = fileName + '.min' + extension,
+            devBaseName = fileName + '.dev' + extension;
+        
+        // bundle for production and development
+        var bundle = browserify(jsFiles[i])
         .transform('babelify', {presets: ['es2015', 'react']})
-        .bundle()
-        .pipe(source(minFileName))
+        .bundle();
+
+        // write development bundle (non-minfied)
+        bundle.pipe(source(devBaseName))
+        .pipe(gulp.dest(JS.DESTINATION));
+
+        // write production bundle (minified)
+        bundle.pipe(source(minBaseName))
         .pipe(streamify(uglify()))
         .pipe(gulp.dest(JS.DESTINATION));
     }

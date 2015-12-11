@@ -1,35 +1,47 @@
 /* COMMON SASS STYLESHEET: AUSTIN GEBAUER */
 @import 'reset';
-@import 'utility';
 @import 'fonts';
 @import 'colors';
+@import 'utility';
+@import 'pages/pagename';
 
 /* CUSTOM STYLES */
 body {
-  font-family: $fs-osans;
-  font-weight: 300;
+  font-family: $fs-source-sans-pro;
+  font-weight: 400;
   font-size: 16px;
-  color: #212121;
+  color: $gray-5;
   margin: 0;
   background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $fs-osans;
+  font-family: $fs-source-sans-pro;
   margin: 0.5em 0;
 }
 
 a {
-  text-decoration: none;
-  color: $gray-3;
+  text-decoration: none !important;
+  color: $gh-blue-1;
+  transition: color 0.3s;
+
+  &:visited {
+    color: $gh-blue-1;
+  }
+
+  &:hover {
+    color: $gh-blue-2;
+  }
+}
+
+ul, ol {
+  margin: 1em 0;
 }
 
 header {
-    
-}
+    nav {
 
-header nav {
-    
+    }
 }
 
 footer {
@@ -37,10 +49,11 @@ footer {
 }
 
 /* MEDIA QUERIES */
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+  body {
+    font-size: 18px;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -59,10 +72,6 @@ footer {
   animation-delay: 0.1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-  -webkit-animation: animateIn 0.4s;
-  -webkit-animation-delay: 0.1s;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
   opacity: 0;
 }
 
@@ -72,16 +81,6 @@ footer {
   }
   to {
     transform: translateY(0px);
-      opacity: 1;
-  }
-}
-
-@-webkit-keyframes animateIn {
-  from {
-      -webkit-transform: translateY(500px);
-  }
-  to {
-    -webkit-transform: translateY(0px);
       opacity: 1;
   }
 }
@@ -133,15 +132,14 @@ footer {
 }
 
 /* FONTS */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
-
-//@font-face {
-//    font-family: 'League Gothic';
-//    src: url('../../fonts/leaguegothic-regular-webfont.eot');
-//    src: url('../../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-//         url('../../fonts/leaguegothic-regular-webfont.woff') format('woff'),
-//         url('../../fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
-//         url('../../fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
-//    font-weight: normal;
-//    font-style: normal;
-//}
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic,900italic);
+/*@font-face {
+    font-family: 'League Gothic';
+    src: url('../../fonts/leaguegothic-regular-webfont.eot');
+    src: url('../../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../../fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('../../fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
